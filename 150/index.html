@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 150 π </title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/43/43102.png">
+    <meta property="og:image" content="https://myzsoit.pl/projekty/pi/pi.png" />
+
+</head>
+
+
+
+<style>
+    html,
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin 0px;
+        background-color: lightblue;
+    }
+    
+    .wrapper {
+        background-color: white;
+        margin: 5%;
+        width: auto;
+        min-height: 100%;
+        padding: 10px;
+        position: relative;
+    }
+    
+    #wynik {
+        color: red;
+    }
+    
+    #wynik1 {
+        color: green;
+        display: block;
+        width: auto;
+    }
+    
+    #wynik2 {
+        color: green;
+        display: block;
+        width: auto;
+    }
+    
+    h1 {
+        font-size: 32px;
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+    
+    h1:before {
+        content: 'ℼ';
+        padding-left: 5px;
+        padding-right: 5px;
+        ;
+    }
+    
+    input[type=button] {
+        background-color: lightcoral;
+        color: white;
+        border-radius: 2px solid black;
+        padding: 5px;
+    }
+    
+    input[type=button]:hover {
+        background-color: red;
+        color: white;
+    }
+    
+    a {
+        text-decoration: none;
+        ;
+    }
+    
+    a:hover::before {
+        content: '✪ ';
+    }
+    
+    a:visited {
+        color: red;
+    }
+</style>
+
+<body onselectstart="return false" onselect="return false" oncopy="return false" oncontextmenu="return false" ondragstart="return false" ondrag="return false">
+
+    <div class="wrapper">
+
+
+        <a href="../">Strona Główna</a> > 150
+        <h1> (150 cyfr)</h1>
+
+        <hr><br>
+        <b>WERSJA I</b> <br>
+        <label for="a">Podaj pierwsze 150 cyfr: </label> <br><br> 3, <input type="text" id="a">
+
+
+        <br><br>
+
+        <div class="wynik">
+            <input type="button" value="SPRAWDŹ :" onclick="wybory()">
+        </div>
+
+
+        <br><br>
+
+
+
+        <div id="wynik"></div>
+
+
+
+        <br><br>
+
+
+        <button onclick="wybory1()">Zobacz poprawną odpowiedź</button> <a href="150.txt"><button>TXT</button></a>
+        <br><br>
+        <div id="wynik1"></div>
+        <br> <br>
+        <hr>
+
+
+        <br><br> <b>WERSJA II</b> <br>
+        <label for="b">Podaj cyfry od 100 do 150: </label> <br><br> <input type="text" id="b">
+
+        <br><br>
+        <div class="wynik">
+            <input type="button" value="SPRAWDŹ :" onclick="wybory2()">
+        </div>
+
+        <br><br>
+
+        <div id="wynik2"></div> <br><br>
+
+        <button onclick="wyboryxd()">Zobacz poprawną odpowiedź</button> <a href="150a.txt"><button>TXT</button></a>
+        <br><br>
+        <div id="wynikxd"></div>
+        <br><br>
+
+        <hr>
+
+        <div class="hello">
+
+
+
+
+
+        </div>
+
+
+
+        <br><br><br><br><br><br><br><br>
+
+        <center><img src="https://image.flaticon.com/icons/png/512/43/43102.png" width="15%" /> <br>
+
+            <h6>&copy; 2020 All Right Reserved by Jakub Achtelik</h6>
+        </center>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        function wybory() {
+
+
+
+            let a = document.getElementById("a").value;
+
+            if (a == "") {
+
+                document.getElementById("wynik").innerHTML = "Prosze wpisać cyfry! ";
+
+            } else if (a == "1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081") {
+                document.getElementById("wynik").innerHTML = "😃 Gratuluję! Podany ciąg jest poprawny" + '<br><br> ';
+
+
+            } else if (a == "141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609550582231725359408128") {
+                document.getElementById("wynik").innerHTML = "😃 Gratuluję! Podany ciąg jest poprawny" + '<br><br> ';
+
+
+            } else {
+
+                document.getElementById("wynik").innerHTML = " 😢 Spróbój ponownie! Podany ciąg zawiera błąd!";
+
+            }
+
+
+
+
+
+        }
+    </script>
+
+    <script>
+        function wybory1() {
+            document.getElementById("wynik1").innerHTML = "141592653589793 238462643 3832795 0288419 716939 9375 105820974944 59230781640 6286208 998628034 82534211706 7982148086 5132823066 4709384460 9550582231 7253594081 28";
+
+        }
+    </script>
+
+    <script>
+        function wybory2() {
+
+
+
+            let b = document.getElementById("b").value;
+
+            if (b == "") {
+
+                document.getElementById("wynik2").innerHTML = "Prosze wpisać cyfry! ";
+
+            } else if (b == "79821480865132823066470938446095505822317253594081") {
+                document.getElementById("wynik2").innerHTML = "😃 Gratuluję! Podany ciąg jest poprawny" + '<br><br> ';
+
+
+            } else if (b == "82148086513282306647093844609550582231725359408128") {
+                document.getElementById("wynik2").innerHTML = "😃 Gratuluję! Podany ciąg jest poprawny" + '<br><br> ';
+
+
+            } else {
+
+                document.getElementById("wynik2").innerHTML = " 😢 Spróbój ponownie! Podany ciąg zawiera błąd!";
+
+            }
+
+
+
+
+
+        }
+    </script>
+
+    <script>
+        function wyboryxd() {
+            document.getElementById("wynikxd").innerHTML = "(..79) 82148086 5132823066 4709384460 9550582231 7253594081 28";
+
+        }
+    </script>
+
+</body>
+
+</html
